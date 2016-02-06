@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var fOutputTextView: UITextView!
     @IBOutlet weak var fInputTextField: UITextField!
     
+    var isTypingNumber: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func fConvertButtonPressed(sender: AnyObject) {
         if let userInput: Double = Double(fInputTextField.text!) {
-            fOutputTextView.text = "\(userInput) in Celsius is \(fahrenheitToCelsius(userInput)) in Fehrenheit"
+            fOutputTextView.text = "\(userInput) in Fahrenheit is \(fahrenheitToCelsius(userInput)) in Celsius"
         } else {
             fOutputTextView.text = "Invalid input"
         }
@@ -40,6 +41,17 @@ class SecondViewController: UIViewController {
     @IBAction func fResetButtonPressed(sender: AnyObject) {
         fInputTextField.text = ""
         fOutputTextView.text = ""
+    }
+    
+    @IBAction func fNumberButtonPressed(sender: UIButton) {
+        if let number = sender.currentTitle {
+            if isTypingNumber {
+                fInputTextField.text! += number
+            } else {
+                fInputTextField.text! = number
+                isTypingNumber = true
+            }
+        }
     }
 }
 

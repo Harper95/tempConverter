@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Celsius to Fahrenheit-->
@@ -14,41 +16,303 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8te-eo-E05">
-                                <rect key="frame" x="20" y="50" width="131" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-6O-Nl4">
-                                <rect key="frame" x="267" y="37" width="80" height="50"/>
-                                <state key="normal" title="Convert"/>
-                                <connections>
-                                    <action selector="cConvertButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dxU-cF-V7o"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hnj-ya-Y3P">
-                                <rect key="frame" x="20" y="275" width="374" height="186"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hnj-ya-Y3P">
+                                <rect key="frame" x="20" y="20" width="560" height="130"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="A3f-9l-aDN"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mY-bt-HQH">
-                                <rect key="frame" x="55" y="120" width="60" height="60"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8te-eo-E05">
+                                <rect key="frame" x="20" y="158" width="140" height="63"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8te-eo-E05" secondAttribute="height" multiplier="20:9" id="HVU-mr-hUH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-6O-Nl4">
+                                <rect key="frame" x="339" y="468" width="119" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9vi-6O-Nl4" secondAttribute="height" multiplier="119:75" id="587-Ln-8wl"/>
+                                    <constraint firstAttribute="height" constant="75" id="7Hh-vt-b5D"/>
+                                    <constraint firstAttribute="width" constant="119" id="Py5-v8-ax3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Convert"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7Hh-vt-b5D"/>
+                                        <exclude reference="Py5-v8-ax3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cConvertButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dxU-cF-V7o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mY-bt-HQH">
+                                <rect key="frame" x="159" y="468" width="89" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="8Qv-Xu-AzW"/>
+                                    <constraint firstAttribute="height" constant="75" id="ROh-VJ-4y7"/>
+                                    <constraint firstAttribute="width" secondItem="2mY-bt-HQH" secondAttribute="height" multiplier="89:75" id="eUU-YR-waC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Reset"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Qv-Xu-AzW"/>
+                                        <exclude reference="ROh-VJ-4y7"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="cResetButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="W6y-r0-4CY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY1-zJ-ECH">
+                                <rect key="frame" x="256" y="219" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="15r-jk-QWx"/>
+                                    <constraint firstAttribute="width" secondItem="yY1-zJ-ECH" secondAttribute="height" multiplier="1:1" id="26l-J0-Jcd"/>
+                                    <constraint firstAttribute="height" constant="75" id="V7T-dh-ecm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="2"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="15r-jk-QWx"/>
+                                        <exclude reference="V7T-dh-ecm"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7I8-j1-P82"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-Vh-JNg">
+                                <rect key="frame" x="339" y="219" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="8EA-Gv-SCa"/>
+                                    <constraint firstAttribute="width" constant="75" id="FXY-CX-L6h"/>
+                                    <constraint firstAttribute="width" secondItem="8Fu-Vh-JNg" secondAttribute="height" multiplier="1:1" id="Qv0-Ey-gfE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="3"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8EA-Gv-SCa"/>
+                                        <exclude reference="FXY-CX-L6h"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="sQp-os-pXY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P7-yE-1YB">
+                                <rect key="frame" x="173" y="219" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1P7-yE-1YB" secondAttribute="height" multiplier="1:1" id="q3U-D4-reF"/>
+                                    <constraint firstAttribute="width" constant="75" id="ryV-W8-ycV"/>
+                                    <constraint firstAttribute="height" constant="75" id="vgu-I8-0zB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="1"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ryV-W8-ycV"/>
+                                        <exclude reference="vgu-I8-0zB"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="RPv-vL-vTr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsn-Oh-YSc">
+                                <rect key="frame" x="256" y="302" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hsn-Oh-YSc" secondAttribute="height" multiplier="1:1" id="JOK-3T-6gg"/>
+                                    <constraint firstAttribute="height" constant="75" id="fxh-4w-g1b"/>
+                                    <constraint firstAttribute="width" constant="75" id="xGN-2f-W1t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="5"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fxh-4w-g1b"/>
+                                        <exclude reference="xGN-2f-W1t"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="vjN-q1-3Zg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY3-Ck-Q6K">
+                                <rect key="frame" x="339" y="302" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BY3-Ck-Q6K" secondAttribute="height" multiplier="1:1" id="4rO-9A-fBW"/>
+                                    <constraint firstAttribute="width" constant="75" id="L6p-md-grg"/>
+                                    <constraint firstAttribute="height" constant="75" id="iiT-BQ-5T9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="6"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="L6p-md-grg"/>
+                                        <exclude reference="iiT-BQ-5T9"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bzr-R6-gUk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYP-aS-mcA">
+                                <rect key="frame" x="173" y="302" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZYP-aS-mcA" secondAttribute="height" multiplier="1:1" id="CYi-Yv-zLh"/>
+                                    <constraint firstAttribute="height" constant="75" id="F8s-m1-xS9"/>
+                                    <constraint firstAttribute="width" constant="75" id="JeL-vt-mvl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="4"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="F8s-m1-xS9"/>
+                                        <exclude reference="JeL-vt-mvl"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="QvM-uA-Wyw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faH-MI-D0q">
+                                <rect key="frame" x="256" y="385" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="faH-MI-D0q" secondAttribute="height" multiplier="1:1" id="eDP-eJ-y3G"/>
+                                    <constraint firstAttribute="height" constant="75" id="hlf-Qr-lJl"/>
+                                    <constraint firstAttribute="width" constant="75" id="ttK-dd-Mze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="8"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hlf-Qr-lJl"/>
+                                        <exclude reference="ttK-dd-Mze"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hXs-gy-1hj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMr-x3-ykY">
+                                <rect key="frame" x="339" y="385" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="dbD-bb-ua5"/>
+                                    <constraint firstAttribute="width" constant="75" id="qhc-zY-pJE"/>
+                                    <constraint firstAttribute="width" secondItem="cMr-x3-ykY" secondAttribute="height" multiplier="1:1" id="t1s-eQ-7CH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="9"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dbD-bb-ua5"/>
+                                        <exclude reference="qhc-zY-pJE"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="gwC-b4-aHc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXz-xM-tWf">
+                                <rect key="frame" x="173" y="385" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Y1F-DF-01H"/>
+                                    <constraint firstAttribute="height" constant="75" id="bFM-m2-yJF"/>
+                                    <constraint firstAttribute="width" secondItem="CXz-xM-tWf" secondAttribute="height" multiplier="1:1" id="vUb-A9-sSR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="7"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Y1F-DF-01H"/>
+                                        <exclude reference="bFM-m2-yJF"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3yJ-15-FYx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-vf-Lot">
+                                <rect key="frame" x="256" y="468" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="5Qn-Qs-QIz"/>
+                                    <constraint firstAttribute="width" secondItem="c9l-vf-Lot" secondAttribute="height" multiplier="1:1" id="fnX-LW-8Fn"/>
+                                    <constraint firstAttribute="width" constant="75" id="gXI-dI-w9X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="0"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Qn-Qs-QIz"/>
+                                        <exclude reference="gXI-dI-w9X"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="cNumberButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jbE-Wd-EdO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yY1-zJ-ECH" firstAttribute="leading" secondItem="1P7-yE-1YB" secondAttribute="trailing" constant="8" id="09J-ll-OkA"/>
+                            <constraint firstItem="hnj-ya-Y3P" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="2xk-U8-pyL"/>
+                            <constraint firstItem="hnj-ya-Y3P" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="2yC-RA-6id"/>
+                            <constraint firstItem="c9l-vf-Lot" firstAttribute="leading" secondItem="2mY-bt-HQH" secondAttribute="trailing" constant="8" id="3nu-co-qju"/>
+                            <constraint firstItem="Hsn-Oh-YSc" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="5nD-Wo-aW4"/>
+                            <constraint firstItem="yY1-zJ-ECH" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="6z4-48-DhO"/>
+                            <constraint firstItem="BY3-Ck-Q6K" firstAttribute="top" secondItem="8Fu-Vh-JNg" secondAttribute="bottom" constant="8" id="8cL-DM-8v8"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="9vi-6O-Nl4" secondAttribute="bottom" constant="8" id="9Bz-lB-ImQ"/>
+                            <constraint firstItem="BY3-Ck-Q6K" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="Hl8-mr-1m9"/>
+                            <constraint firstItem="ZYP-aS-mcA" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="M72-Lj-lvJ"/>
+                            <constraint firstItem="Hsn-Oh-YSc" firstAttribute="top" secondItem="yY1-zJ-ECH" secondAttribute="bottom" constant="8" id="N4m-wa-AnE"/>
+                            <constraint firstItem="9vi-6O-Nl4" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="OKz-YL-R7q"/>
+                            <constraint firstItem="9vi-6O-Nl4" firstAttribute="top" secondItem="cMr-x3-ykY" secondAttribute="bottom" constant="8" id="PD6-vW-gpf"/>
+                            <constraint firstItem="hnj-ya-Y3P" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="TIe-YK-3NR"/>
+                            <constraint firstItem="cMr-x3-ykY" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="Umc-wj-iis"/>
+                            <constraint firstItem="8Fu-Vh-JNg" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="WFa-az-aCB"/>
+                            <constraint firstItem="9vi-6O-Nl4" firstAttribute="leading" secondItem="c9l-vf-Lot" secondAttribute="trailing" constant="8" id="XxC-5m-woY"/>
+                            <constraint firstItem="c9l-vf-Lot" firstAttribute="top" secondItem="faH-MI-D0q" secondAttribute="bottom" constant="8" id="Y1i-rH-FN4"/>
+                            <constraint firstItem="CXz-xM-tWf" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="aak-KB-jqB"/>
+                            <constraint firstItem="2mY-bt-HQH" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="bHT-Of-3On"/>
+                            <constraint firstItem="faH-MI-D0q" firstAttribute="top" secondItem="Hsn-Oh-YSc" secondAttribute="bottom" constant="8" id="cS0-Un-Q5E"/>
+                            <constraint firstItem="8te-eo-E05" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="dNt-k1-waJ"/>
+                            <constraint firstItem="ZYP-aS-mcA" firstAttribute="top" secondItem="1P7-yE-1YB" secondAttribute="bottom" constant="8" id="dh9-D9-c8h"/>
+                            <constraint firstItem="BY3-Ck-Q6K" firstAttribute="leading" secondItem="Hsn-Oh-YSc" secondAttribute="trailing" constant="8" id="drB-cy-ZqN"/>
+                            <constraint firstItem="yY1-zJ-ECH" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="dy2-NF-6jD"/>
+                            <constraint firstItem="Hsn-Oh-YSc" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="e8v-yq-zJU"/>
+                            <constraint firstItem="cMr-x3-ykY" firstAttribute="leading" secondItem="faH-MI-D0q" secondAttribute="trailing" constant="8" id="fBn-Zd-OOO"/>
+                            <constraint firstItem="cMr-x3-ykY" firstAttribute="top" secondItem="BY3-Ck-Q6K" secondAttribute="bottom" constant="8" id="fzE-XI-KWf"/>
+                            <constraint firstItem="8te-eo-E05" firstAttribute="top" secondItem="hnj-ya-Y3P" secondAttribute="bottom" constant="8" id="hig-Zw-lte"/>
+                            <constraint firstItem="faH-MI-D0q" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="i2u-Wz-NWc"/>
+                            <constraint firstItem="8Fu-Vh-JNg" firstAttribute="leading" secondItem="yY1-zJ-ECH" secondAttribute="trailing" constant="8" id="iY1-hS-SIQ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="c9l-vf-Lot" secondAttribute="bottom" constant="8" id="mS1-Yo-ahO"/>
+                            <constraint firstItem="c9l-vf-Lot" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="nTh-0O-qB2"/>
+                            <constraint firstItem="CXz-xM-tWf" firstAttribute="top" secondItem="ZYP-aS-mcA" secondAttribute="bottom" constant="8" id="oFy-ZU-a18"/>
+                            <constraint firstItem="2mY-bt-HQH" firstAttribute="top" secondItem="CXz-xM-tWf" secondAttribute="bottom" constant="8" id="oSO-qW-b5H"/>
+                            <constraint firstItem="faH-MI-D0q" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="oam-WL-hgB"/>
+                            <constraint firstItem="c9l-vf-Lot" firstAttribute="height" secondItem="1P7-yE-1YB" secondAttribute="height" id="rLG-uo-XdJ"/>
+                            <constraint firstItem="faH-MI-D0q" firstAttribute="leading" secondItem="CXz-xM-tWf" secondAttribute="trailing" constant="8" id="tyZ-Cq-d9Y"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="2mY-bt-HQH" secondAttribute="bottom" constant="8" id="wl2-Mo-0tI"/>
+                            <constraint firstItem="Hsn-Oh-YSc" firstAttribute="leading" secondItem="ZYP-aS-mcA" secondAttribute="trailing" constant="8" id="xpK-kk-VwQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Celsius to Fahrenheit" image="first" id="acW-dT-cKf"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="cInputTextField" destination="8te-eo-E05" id="9SF-1e-iiw"/>
                         <outlet property="cOutputTextView" destination="hnj-ya-Y3P" id="Af2-Ry-Esl"/>
@@ -67,43 +331,125 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-zh-tua">
-                                <rect key="frame" x="20" y="275" width="374" height="186"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZC-rJ-51K">
-                                <rect key="frame" x="267" y="37" width="80" height="50"/>
+                                <rect key="frame" x="253" y="579" width="119" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Convert"/>
                                 <connections>
                                     <action selector="fConvertButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="D6D-xS-8kO"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJb-HS-yez">
-                                <rect key="frame" x="20" y="50" width="131" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvU-SZ-7Ri">
-                                <rect key="frame" x="55" y="120" width="60" height="60"/>
+                                <rect key="frame" x="73" y="579" width="89" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="fResetButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ewI-yY-Ge0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-Pi-NB5">
+                                <rect key="frame" x="170" y="330" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="KeX-bS-9hQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdd-gy-xjB">
+                                <rect key="frame" x="253" y="330" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="WLI-gh-iO3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQp-6u-Zqd">
+                                <rect key="frame" x="87" y="330" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="75j-Br-LrI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66n-Zv-yl5">
+                                <rect key="frame" x="170" y="413" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="5"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="B88-ue-kFC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q91-fF-4f3">
+                                <rect key="frame" x="253" y="413" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="6"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="OHp-wX-wQM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sw-j3-VB1">
+                                <rect key="frame" x="87" y="413" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="774-BA-869"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNR-Wx-Dvb">
+                                <rect key="frame" x="170" y="496" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="tCp-Hc-k4t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6am-7d-q9g">
+                                <rect key="frame" x="253" y="496" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="9"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="oF0-Lc-WE8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBc-Nu-p4w">
+                                <rect key="frame" x="87" y="496" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="9db-SH-z4z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAb-61-2CC">
+                                <rect key="frame" x="170" y="579" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="0"/>
+                                <connections>
+                                    <action selector="fNumberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ONx-3F-gCb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biV-ID-SY3">
+                                <rect key="frame" x="20" y="209" width="169" height="63"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-zh-tua">
+                                <rect key="frame" x="20" y="20" width="560" height="130"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fahrenheit to Celsius" image="second" id="cPa-gy-q4n"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="fInputTextField" destination="UJb-HS-yez" id="3B3-ym-QBM"/>
+                        <outlet property="fInputTextField" destination="biV-ID-SY3" id="NIB-fp-sia"/>
                         <outlet property="fOutputTextView" destination="Rru-zh-tua" id="hzp-Lt-dAB"/>
                     </connections>
                 </viewController>
@@ -116,7 +462,6 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

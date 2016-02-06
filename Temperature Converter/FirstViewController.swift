@@ -13,11 +13,13 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var cOutputTextView: UITextView!
     @IBOutlet weak var cInputTextField: UITextField!
     
+    var isTypingNumber: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         cOutputTextView.text = ""
+        resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +36,7 @@ class FirstViewController: UIViewController {
         // If valid input, update the label
         // else invalid input, run error message
         if let userInput: Double = Double(cInputTextField.text!) {
-             cOutputTextView.text = "\(userInput) in Celsius is \(celcsiusToFehrenheit(userInput)) in Fehrenheit"
+             cOutputTextView.text = "\(userInput) in Celsius is \(celcsiusToFehrenheit(userInput)) in Fahrenheit"
         } else {
             cOutputTextView.text = "Invalid input"
         }
@@ -47,5 +49,29 @@ class FirstViewController: UIViewController {
         cOutputTextView.text = ""
     }
     
+    @IBAction func cNumberButtonPressed(sender: UIButton) {
+        if let number = sender.currentTitle {
+            if isTypingNumber {
+                cInputTextField.text! += number
+            } else {
+                cInputTextField.text! = number
+                isTypingNumber = true
+            }
+        }
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
